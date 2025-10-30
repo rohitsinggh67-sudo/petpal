@@ -102,20 +102,16 @@ export class WelcomePage implements OnInit {
     buttons: [
       {
         text: 'Login',
-        handler: async () => {
-          await actionSheet.dismiss();
-          setTimeout(() => {
-            this.router.navigateByUrl('/login', { replaceUrl: true });
-          }, 300);
+        handler: () => {
+          this.router.navigate(['/login']);
+          return true;
         },
       },
       {
         text: 'Sign Up',
-        handler: async () => {
-          await actionSheet.dismiss();
-          setTimeout(() => {
-            this.router.navigateByUrl('/signup', { replaceUrl: true });
-          }, 300);
+        handler: () => {
+          this.router.navigate(['/signup']);
+          return true;
         },
       },
       {
