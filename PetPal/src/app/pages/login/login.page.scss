@@ -1,10 +1,13 @@
-.login-container {
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .header-icon {
@@ -16,9 +19,10 @@
 h2 {
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--ion-color-light);
 }
 
-p {
+.subtitle {
   color: var(--ion-color-medium);
   margin-bottom: 24px;
 }
@@ -29,9 +33,14 @@ form {
 
 ion-item {
   --border-radius: 10px;
-  --background: var(--ion-color-light-tint);
+  --background: rgba(255, 255, 255, 0.1);
   margin-bottom: 16px;
   --padding-start: 10px;
+}
+
+.rounded-item {
+  --border-radius: 10px;
+  margin-bottom: 16px;
 }
 
 .forgot-password {
@@ -60,11 +69,22 @@ ion-item {
   margin: 30px 0;
 
   span {
-    background: #fff;
+    background: var(--ion-color-dark);
     padding: 0 10px;
     color: var(--ion-color-medium);
     font-size: 0.9em;
   }
+}
+
+.styled-button {
+  --border-radius: 10px;
+  height: 50px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.social-button {
+  margin-top: 10px;
 }
 
 .social-buttons {
