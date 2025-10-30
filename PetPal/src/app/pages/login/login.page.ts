@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ModalController, IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; // ✅ Use RouterModule
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router'; // ✅ Use RouterModule
     IonicModule,
     CommonModule,
     ReactiveFormsModule,
-    RouterModule, // ✅ Handles all routerLink stuff
+    RouterModule,
   ],
 })
 export class LoginPage implements OnInit {
