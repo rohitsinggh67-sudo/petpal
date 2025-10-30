@@ -1,83 +1,63 @@
-<ion-header>
-  <ion-toolbar color="dark">
-    <ion-buttons slot="start">
-      <ion-button [routerLink]="['/welcome']">
-        <!-- 
-          THIS WAS THE BUG:
-          It said </ion-button> here. It is now </ion-icon>.
-        -->
-        <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+<ion-content class="login-content">
+  <div class="login-container">
+    <div class="login-form-section">
+      <ion-button fill="clear" class="back-button" [routerLink]="['/welcome']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
-    </ion-buttons>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content class="ion-padding" color="dark">
-  <div class="form-container">
-    <h2>Welcome Back!</h2>
-    <p class="subtitle">Log in to your PetPal account</p>
+      <div class="form-content">
+        <h1 class="login-title">Login</h1>
 
-    <!-- The form is linked in the .ts file -->
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <ion-item class="rounded-item" lines="none">
-        <ion-icon name="mail-outline" slot="start"></ion-icon>
-        <ion-input
-          label="Email"
-          labelPlacement="floating"
-          type="email"
-          formControlName="email"
-          required
-        ></ion-input>
-      </ion-item>
-      <ion-item class="rounded-item" lines="none">
-        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-        <ion-input
-          label="Password"
-          labelPlacement="floating"
-          type="password"
-          formControlName="password"
-          required
-        ></ion-input>
-      </ion-item>
-      <div class="forgot-password">
-        <a (click)="onForgotPassword()">Forgot Password?</a>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="input-group">
+            <label class="input-label">Email</label>
+            <input
+              type="email"
+              class="styled-input"
+              formControlName="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Password</label>
+            <input
+              type="password"
+              class="styled-input"
+              formControlName="password"
+              placeholder="******************"
+              required
+            />
+          </div>
+
+          <div class="forgot-password">
+            <a (click)="onForgotPassword()">Forget Password</a>
+          </div>
+
+          <button
+            type="submit"
+            class="signin-button"
+            [disabled]="loginForm.invalid"
+          >
+            Sign in
+          </button>
+        </form>
+
+        <div class="create-account">
+          <a [routerLink]="['/signup']">Create Account</a>
+        </div>
       </div>
-      <ion-button
-        type="submit"
-        expand="block"
-        class="styled-button"
-        [disabled]="loginForm.invalid"
-      >
-        Login with Email
-      </ion-button>
-    </form>
-
-    <div class="divider">
-      <span>or log in with</span>
     </div>
 
-    <ion-button
-      expand="block"
-      fill="outline"
-      class="styled-button social-button google"
-      (click)="onGoogleLogin()"
-    >
-      <ion-icon name="logo-google" slot="start"></ion-icon>
-      Login with Google
-    </ion-button>
-    <ion-button
-      expand="block"
-      fill="outline"
-      class="styled-button social-button phone"
-      (click)="onPhoneLogin()"
-    >
-      <ion-icon name="call-outline" slot="start"></ion-icon>
-      Login with Phone (OTP)
-    </ion-button>
-
-    <div class="signup-link">
-      Don't have an account? <a [routerLink]="['/signup']">Sign Up</a>
+    <div class="pet-images-section">
+      <div class="pet-grid">
+        <div class="pet-card white-dog"></div>
+        <div class="pet-card parrot-top"></div>
+        <div class="pet-card tabby-cat"></div>
+        <div class="pet-card fluffy-cat"></div>
+        <div class="pet-card parrot-bottom"></div>
+      </div>
     </div>
   </div>
 </ion-content>
