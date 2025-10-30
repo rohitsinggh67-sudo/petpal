@@ -1,0 +1,49 @@
+// Set the dark background for the modal content
+ion-content {
+  --background: #1e2023; // Our new dark color
+}
+
+.info-text {
+  text-align: center;
+  color: #aeb2b8; // Light gray text
+  margin-bottom: 24px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  ion-input {
+    width: 45px;
+    height: 55px;
+    --border-color: #3a3d42; // Dark border
+    --border-width: 1px;
+    --border-radius: 8px;
+    --background: #2b2d30; // Dark input background
+    color: #ffffff; // White text
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+.verify-button {
+  --background: #00f2fe; // Cyan accent
+  --color: #1e2023; // Dark text
+  --border-radius: 25px;
+  height: 50px;
+  font-weight: 600;
+}
+
+.resend-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #aeb2b8;
+
+  a {
+    color: #00f2fe; // Cyan accent
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

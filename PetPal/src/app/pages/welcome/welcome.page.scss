@@ -1,0 +1,75 @@
+// This targets the component itself
+:host {
+  // A dark fallback color for the background
+  --ion-background-color: #1a1a2e;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+
+  //
+  // This is your new "Brushed Dark Gradient"
+  // It's a diagonal (160deg) gradient from a dark slate blue
+  // to a deep charcoal/purple.
+  //
+  background: linear-gradient(160deg, #1f2d3a 0%, #1a1a2e 100%);
+}
+
+.illustration-wrapper {
+  // Pushes the illustration down from the top
+  margin-top: 20vh;
+}
+
+.welcome-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff; // Bright white text for contrast
+  margin-top: 24px;
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  color: #b0bec5; // A muted, light blue-gray for the subtitle
+  // Pushes the buttons down
+  margin-bottom: 30vh;
+}
+
+.button-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 16px;
+  // Fixes the buttons to the bottom of the screen
+  position: absolute;
+  bottom: 50px;
+}
+
+// This styles the main "Login" button
+.styled-button {
+  --border-radius: 25px; // Rounded
+  height: 50px;
+  font-weight: 600;
+  text-transform: none; // Prevents all-caps
+  font-size: 1rem;
+  margin-bottom: 10px;
+
+  // New accent color: Electric Cyan
+  --background: #00f2fe;
+  --color: #1a1a2e; // Dark text on the bright button
+  // Adds a "glow" to the button
+  --box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+}
+
+// This styles the "Sign Up" button
+.styled-button.outline {
+  --background: transparent; // No background fill
+  --border-color: #00f2fe; // Cyan border
+  --color: #00f2fe; // Cyan text
+  --box-shadow: none; // No glow
+}
+

@@ -1,0 +1,91 @@
+// Set the dark background
+:host {
+  --ion-background-color: #1a1a2e;
+}
+
+// Make the content background match
+ion-content {
+  --background: #1a1a2e;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff; // White text
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #aeb2b8; // Light gray text
+  margin-bottom: 30px;
+}
+
+// Dark-themed rounded inputs
+.rounded-item {
+  --background: #2b2d30; // Dark input background
+  --border-radius: 12px;
+  --padding-start: 10px;
+  margin-bottom: 15px;
+  color: #ffffff; // White text
+
+  ion-icon {
+    color: #aeb2b8; // Gray icon
+  }
+}
+
+.styled-button {
+  --border-radius: 25px;
+  height: 50px;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 1rem;
+  margin-top: 20px; // Add space above button
+  margin-bottom: 10px;
+  --background: #00f2fe; // Cyan accent
+  --color: #1a1a2e; // Dark text
+  --box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #888;
+  margin: 30px 0;
+
+  span {
+    padding: 0 10px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #3a3d42; // Dark border
+  }
+}
+
+.social-button {
+  --border-width: 1px;
+  --color: #db4437; // Google Red
+  --border-color: #db4437;
+  --box-shadow: none;
+  margin-top: 0;
+  --background: transparent;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 30px;
+  color: #aeb2b8;
+  a {
+    color: #00f2fe; // Cyan accent
+    font-weight: 600;
+  }
+}

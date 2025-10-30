@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Verify Account</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="dark">
+  <p class="info-text">
+    We've sent a 6-digit verification code to your email.
+  </p>
+
+  <div class="otp-inputs">
+    <ion-input type="tel" maxlength="1" aria-label="otp digit 1"></ion-input>
+    <ion-input type="tel" maxlength="1" aria-label="otp digit 2"></ion-input>
+    <ion-input type="tel" maxlength="1" aria-label="otp digit 3"></ion-input>
+    <ion-input type="tel" maxlength="1" aria-label="otp digit 4"></ion-input>
+    <ion-input type="tel" maxlength="1" aria-label="otp digit 5"></ion-input>
+    <ion-input type="tel" maxlength="1" aria-label="otp digit 6"></ion-input>
+  </div>
+
+  <ion-button expand="block" class="verify-button" (click)="confirm()">
+    Verify & Continue
+  </ion-button>
+
+  <div class="resend-text">
+    Didn't receive a code? <a (click)="resendCode()">Resend</a>
+  </div>
+</ion-content>

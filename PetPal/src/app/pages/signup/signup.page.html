@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/welcome']">
+        <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="dark">
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <p class="subtitle">Join PetPal today!</p>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <ion-item class="rounded-item" lines="none">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-input
+          label="Full Name"
+          labelPlacement="floating"
+          type="text"
+          formControlName="name"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded-item" lines="none">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-input
+          label="Email"
+          labelPlacement="floating"
+          type="email"
+          formControlName="email"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded-item" lines="none">
+        <ion-icon name="call-outline" slot="start"></ion-icon>
+        <ion-input
+          label="Phone Number"
+          labelPlacement="floating"
+          type="tel"
+          formControlName="phone"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded-item" lines="none">
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+        <ion-input
+          label="Password"
+          labelPlacement="floating"
+          type="password"
+          formControlName="password"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        type="submit"
+        expand="block"
+        class="styled-button"
+        [disabled]="signupForm.invalid"
+      >
+        Create Account
+      </ion-button>
+    </form>
+
+    <div class="divider">
+      <span>or sign up with</span>
+    </div>
+
+    <ion-button
+      expand="block"
+      fill="outline"
+      class="styled-button social-button google"
+      (click)="onGoogleSignup()"
+    >
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Sign Up with Google
+    </ion-button>
+
+    <div class="login-link">
+      Already have an account? <a [routerLink]="['/login']">Log In</a>
+    </div>
+  </div>
+</ion-content>

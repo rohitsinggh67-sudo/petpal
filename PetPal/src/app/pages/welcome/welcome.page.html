@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <div class="welcome-container" @fadeIn>
+    
+    <div class="illustration-wrapper">
+      
+      <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(30, 60)"><path d="M60 0 C0 0, 0 50, 20 50 C30 50, 40 40, 60 40 C80 40, 90 50, 100 50 C120 50, 120 0, 60 0 Z" fill="#b0bec5" /><path d="M15 0 L30 20 L0 20 Z" fill="#eceff1" /><path d="M105 0 L90 20 L120 20 Z" fill="#eceff1" /><circle cx="40" cy="25" r="5" fill="#1e2023" /><circle cx="80" cy="25" r="5" fill="#1e2023" /><path d="M50 35 Q60 45, 70 35" stroke="#00f2fe" stroke-width="3" fill="none" /></g>
+        <g transform="translate(90, 70)"><path d="M50 0 C10 0, 0 40, 10 50 C15 60, 30 55, 50 50 C70 55, 85 60, 90 50 C100 40, 90 0, 50 0 Z" fill="#eceff1" /><path d="M0 30 C-10 40, -10 60, 5 60 C15 60, 15 40, 0 30 Z" fill="#00f2fe" /><path d="M100 30 C110 40, 110 60, 95 60 C85 60, 85 40, 100 30 Z" fill="#00f2fe" /><circle cx="30" cy="20" r="5" fill="#1e2023" /><circle cx="70" cy="20" r="5" fill="#1e2023" /><path d="M45 35 Q50 45, 55 35" stroke="#b0bec5" stroke-width="2" fill="none" /></g>
+      </svg>
+    </div>
+    <h1 class="welcome-title">Welcome to PetPal</h1>
+    <p class="welcome-subtitle">All your pet's needs, one tap away.</p>
+
+    <div class="button-container">
+      <div class="button-container">
+  <ion-button
+    expand="block"
+    class="styled-button"
+    routerLink="/login">
+    Let's Go
+  </ion-button>
+</div>
+
+    </div>
+
+  </div>
+</ion-content>
